@@ -7,24 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662F43021FB6C86900975F4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 662F43011FB6C86800975F4C /* GoogleService-Info.plist */; };
+		662F43061FB6D8E800975F4C /* FPAuthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F43041FB6D8E800975F4C /* FPAuthPickerViewController.swift */; };
+		662F43071FB6D8E800975F4C /* FPAuthPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662F43051FB6D8E800975F4C /* FPAuthPickerViewController.xib */; };
+		662F430D1FB6D9F000975F4C /* FPPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F43091FB6D9EF00975F4C /* FPPost.swift */; };
+		662F430E1FB6D9F000975F4C /* FPComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F430A1FB6D9EF00975F4C /* FPComment.swift */; };
+		662F430F1FB6D9F000975F4C /* FPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F430B1FB6D9EF00975F4C /* FPUser.swift */; };
+		662F43101FB6D9F000975F4C /* KZPropertyMapper+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F430C1FB6D9EF00975F4C /* KZPropertyMapper+extension.swift */; };
+		662F43151FB6DFD300975F4C /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F43141FB6DFD300975F4C /* GradientLayer.swift */; };
+		662F43161FB6E70800975F4C /* Amaranth-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 662F43131FB6DA7700975F4C /* Amaranth-Bold.otf */; };
 		66391D231FB34D6100AEB34B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66391D221FB34D6100AEB34B /* AppDelegate.swift */; };
-		66391D251FB34D6100AEB34B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66391D241FB34D6100AEB34B /* ViewController.swift */; };
 		66391D281FB34D6100AEB34B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66391D261FB34D6100AEB34B /* Main.storyboard */; };
 		66391D2A1FB34D6100AEB34B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66391D291FB34D6100AEB34B /* Assets.xcassets */; };
 		66391D2D1FB34D6100AEB34B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66391D2B1FB34D6100AEB34B /* LaunchScreen.storyboard */; };
+		6676A04D1FB61F240024429D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676A04C1FB61F240024429D /* SignInViewController.swift */; };
+		6676A04F1FB61F7D0024429D /* FPAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676A04E1FB61F7D0024429D /* FPAppState.swift */; };
 		93E1203376F8087EC4914176 /* Pods_FriendlyPix_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C6D4D3188B67D4F6C3352E /* Pods_FriendlyPix_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27C6D4D3188B67D4F6C3352E /* Pods_FriendlyPix_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FriendlyPix_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C042D5A942C41055580DCC /* Pods-FriendlyPix-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendlyPix-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendlyPix-Swift/Pods-FriendlyPix-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		662F43011FB6C86800975F4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		662F43031FB6C94500975F4C /* FriendlyPix-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FriendlyPix-Swift.entitlements"; sourceTree = "<group>"; };
+		662F43041FB6D8E800975F4C /* FPAuthPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPAuthPickerViewController.swift; sourceTree = "<group>"; };
+		662F43051FB6D8E800975F4C /* FPAuthPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPAuthPickerViewController.xib; sourceTree = "<group>"; };
+		662F43091FB6D9EF00975F4C /* FPPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FPPost.swift; path = "FriendlyPix-Swift/Models/FPPost.swift"; sourceTree = SOURCE_ROOT; };
+		662F430A1FB6D9EF00975F4C /* FPComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FPComment.swift; path = "FriendlyPix-Swift/Models/FPComment.swift"; sourceTree = SOURCE_ROOT; };
+		662F430B1FB6D9EF00975F4C /* FPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FPUser.swift; path = "FriendlyPix-Swift/Models/FPUser.swift"; sourceTree = SOURCE_ROOT; };
+		662F430C1FB6D9EF00975F4C /* KZPropertyMapper+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "KZPropertyMapper+extension.swift"; path = "FriendlyPix-Swift/Models/KZPropertyMapper+extension.swift"; sourceTree = SOURCE_ROOT; };
+		662F43131FB6DA7700975F4C /* Amaranth-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Bold.otf"; sourceTree = "<group>"; };
+		662F43141FB6DFD300975F4C /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
 		66391D1F1FB34D6100AEB34B /* FriendlyPix-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FriendlyPix-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66391D221FB34D6100AEB34B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66391D241FB34D6100AEB34B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		66391D271FB34D6100AEB34B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66391D291FB34D6100AEB34B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66391D2C1FB34D6100AEB34B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66391D2E1FB34D6100AEB34B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6676A04C1FB61F240024429D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		6676A04E1FB61F7D0024429D /* FPAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPAppState.swift; sourceTree = "<group>"; };
 		89E3AA24D9CA2638D731E6DF /* Pods-FriendlyPix-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendlyPix-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendlyPix-Swift/Pods-FriendlyPix-Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,9 +78,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		662F43081FB6D9D700975F4C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				662F430A1FB6D9EF00975F4C /* FPComment.swift */,
+				662F43091FB6D9EF00975F4C /* FPPost.swift */,
+				662F430B1FB6D9EF00975F4C /* FPUser.swift */,
+				662F430C1FB6D9EF00975F4C /* KZPropertyMapper+extension.swift */,
+			);
+			name = Models;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		662F43111FB6DA1200975F4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66391D291FB34D6100AEB34B /* Assets.xcassets */,
+				66391D2B1FB34D6100AEB34B /* LaunchScreen.storyboard */,
+				662F43131FB6DA7700975F4C /* Amaranth-Bold.otf */,
+				66391D261FB34D6100AEB34B /* Main.storyboard */,
+				66391D2E1FB34D6100AEB34B /* Info.plist */,
+				662F43141FB6DFD300975F4C /* GradientLayer.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		662F43121FB6DA3800975F4C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6676A04C1FB61F240024429D /* SignInViewController.swift */,
+				662F43041FB6D8E800975F4C /* FPAuthPickerViewController.swift */,
+				662F43051FB6D8E800975F4C /* FPAuthPickerViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		66391D161FB34D6100AEB34B = {
 			isa = PBXGroup;
 			children = (
+				662F43011FB6C86800975F4C /* GoogleService-Info.plist */,
 				66391D211FB34D6100AEB34B /* FriendlyPix-Swift */,
 				66391D201FB34D6100AEB34B /* Products */,
 				2D6F83C64953E2A7E1AE7BEE /* Pods */,
@@ -78,12 +135,12 @@
 		66391D211FB34D6100AEB34B /* FriendlyPix-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				662F43031FB6C94500975F4C /* FriendlyPix-Swift.entitlements */,
+				662F43121FB6DA3800975F4C /* Controllers */,
+				662F43081FB6D9D700975F4C /* Models */,
 				66391D221FB34D6100AEB34B /* AppDelegate.swift */,
-				66391D241FB34D6100AEB34B /* ViewController.swift */,
-				66391D261FB34D6100AEB34B /* Main.storyboard */,
-				66391D291FB34D6100AEB34B /* Assets.xcassets */,
-				66391D2B1FB34D6100AEB34B /* LaunchScreen.storyboard */,
-				66391D2E1FB34D6100AEB34B /* Info.plist */,
+				662F43111FB6DA1200975F4C /* Supporting Files */,
+				6676A04E1FB61F7D0024429D /* FPAppState.swift */,
 			);
 			path = "FriendlyPix-Swift";
 			sourceTree = "<group>";
@@ -124,6 +181,14 @@
 					66391D1E1FB34D6100AEB34B = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -150,7 +215,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662F43161FB6E70800975F4C /* Amaranth-Bold.otf in Resources */,
 				66391D2D1FB34D6100AEB34B /* LaunchScreen.storyboard in Resources */,
+				662F43071FB6D8E800975F4C /* FPAuthPickerViewController.xib in Resources */,
+				662F43021FB6C86900975F4C /* GoogleService-Info.plist in Resources */,
 				66391D2A1FB34D6100AEB34B /* Assets.xcassets in Resources */,
 				66391D281FB34D6100AEB34B /* Main.storyboard in Resources */,
 			);
@@ -186,11 +254,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-FriendlyPix-Swift/Pods-FriendlyPix-Swift-resources.sh",
 				"${PODS_ROOT}/FirebaseInvites/Resources/GINInviteResources.bundle",
 				"${PODS_ROOT}/FirebaseInvites/Resources/GPPACLPickerResources.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseFacebookAuthUI.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebasePhoneAuthUI.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseFacebookAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebasePhoneAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseTwitterAuthUI.bundle,
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
@@ -263,7 +331,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66391D251FB34D6100AEB34B /* ViewController.swift in Sources */,
+				662F43061FB6D8E800975F4C /* FPAuthPickerViewController.swift in Sources */,
+				662F430F1FB6D9F000975F4C /* FPUser.swift in Sources */,
+				662F43151FB6DFD300975F4C /* GradientLayer.swift in Sources */,
+				662F430D1FB6D9F000975F4C /* FPPost.swift in Sources */,
+				6676A04D1FB61F240024429D /* SignInViewController.swift in Sources */,
+				662F43101FB6D9F000975F4C /* KZPropertyMapper+extension.swift in Sources */,
+				662F430E1FB6D9F000975F4C /* FPComment.swift in Sources */,
+				6676A04F1FB61F7D0024429D /* FPAppState.swift in Sources */,
 				66391D231FB34D6100AEB34B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +477,7 @@
 			baseConfigurationReference = 65C042D5A942C41055580DCC /* Pods-FriendlyPix-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FriendlyPix-Swift/FriendlyPix-Swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T6MHKM77M;
 				INFOPLIST_FILE = "FriendlyPix-Swift/Info.plist";
@@ -418,6 +494,7 @@
 			baseConfigurationReference = 89E3AA24D9CA2638D731E6DF /* Pods-FriendlyPix-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FriendlyPix-Swift/FriendlyPix-Swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T6MHKM77M;
 				INFOPLIST_FILE = "FriendlyPix-Swift/Info.plist";
