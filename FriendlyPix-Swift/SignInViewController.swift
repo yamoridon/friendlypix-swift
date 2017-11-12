@@ -25,7 +25,7 @@ class SignInViewController: UIViewController, FUIAuthDelegate {
         authUI = FUIAuth.defaultAuthUI()
         authUI.delegate = self
         authUI.tosurl = URL(string: firebaseTermsOfService)
-        authUI.isSignInWithEmailHidden = true
+        authUI.isSignInWithEmailHidden = false
         authUI.providers = [FUIGoogleAuth(), FUIFacebookAuth()]
     }
 
@@ -93,6 +93,7 @@ class SignInViewController: UIViewController, FUIAuthDelegate {
                 FPAppState.sharedInstance.currentUser = FPUser(dictionary: person)
                 FPAppState.sharedInstance.currentUser?.setUserID(user.uid)
             }
+            self.firstTime = true
             self.performSegue(withIdentifier: "SignInToFP", sender: self)
         }
     }

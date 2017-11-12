@@ -13,9 +13,15 @@
 		662F430D1FB6D9F000975F4C /* FPPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F43091FB6D9EF00975F4C /* FPPost.swift */; };
 		662F430E1FB6D9F000975F4C /* FPComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F430A1FB6D9EF00975F4C /* FPComment.swift */; };
 		662F430F1FB6D9F000975F4C /* FPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F430B1FB6D9EF00975F4C /* FPUser.swift */; };
-		662F43101FB6D9F000975F4C /* KZPropertyMapper+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F430C1FB6D9EF00975F4C /* KZPropertyMapper+extension.swift */; };
 		662F43151FB6DFD300975F4C /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F43141FB6DFD300975F4C /* GradientLayer.swift */; };
 		662F43161FB6E70800975F4C /* Amaranth-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 662F43131FB6DA7700975F4C /* Amaranth-Bold.otf */; };
+		662F43181FB7071C00975F4C /* FPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F43171FB7071C00975F4C /* FPTabBarController.swift */; };
+		662F431A1FB7197200975F4C /* FPEditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F43191FB7197200975F4C /* FPEditPhotoViewController.swift */; };
+		662F431C1FB7431100975F4C /* FPPhotoTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F431B1FB7431100975F4C /* FPPhotoTimelineViewController.swift */; };
+		662F431E1FB7757B00975F4C /* FPAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F431D1FB7757B00975F4C /* FPAccountViewController.swift */; };
+		662F43201FB8047900975F4C /* FPCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F431F1FB8047900975F4C /* FPCommentViewController.swift */; };
+		662F43221FB80D3400975F4C /* FPFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F43211FB80D3400975F4C /* FPFeedViewController.swift */; };
+		662F43241FB80D6600975F4C /* FPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F43231FB80D6600975F4C /* FPHomeViewController.swift */; };
 		66391D231FB34D6100AEB34B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66391D221FB34D6100AEB34B /* AppDelegate.swift */; };
 		66391D281FB34D6100AEB34B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66391D261FB34D6100AEB34B /* Main.storyboard */; };
 		66391D2A1FB34D6100AEB34B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66391D291FB34D6100AEB34B /* Assets.xcassets */; };
@@ -35,9 +41,15 @@
 		662F43091FB6D9EF00975F4C /* FPPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FPPost.swift; path = "FriendlyPix-Swift/Models/FPPost.swift"; sourceTree = SOURCE_ROOT; };
 		662F430A1FB6D9EF00975F4C /* FPComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FPComment.swift; path = "FriendlyPix-Swift/Models/FPComment.swift"; sourceTree = SOURCE_ROOT; };
 		662F430B1FB6D9EF00975F4C /* FPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FPUser.swift; path = "FriendlyPix-Swift/Models/FPUser.swift"; sourceTree = SOURCE_ROOT; };
-		662F430C1FB6D9EF00975F4C /* KZPropertyMapper+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "KZPropertyMapper+extension.swift"; path = "FriendlyPix-Swift/Models/KZPropertyMapper+extension.swift"; sourceTree = SOURCE_ROOT; };
 		662F43131FB6DA7700975F4C /* Amaranth-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Bold.otf"; sourceTree = "<group>"; };
 		662F43141FB6DFD300975F4C /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
+		662F43171FB7071C00975F4C /* FPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPTabBarController.swift; sourceTree = "<group>"; };
+		662F43191FB7197200975F4C /* FPEditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPEditPhotoViewController.swift; sourceTree = "<group>"; };
+		662F431B1FB7431100975F4C /* FPPhotoTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPhotoTimelineViewController.swift; sourceTree = "<group>"; };
+		662F431D1FB7757B00975F4C /* FPAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPAccountViewController.swift; sourceTree = "<group>"; };
+		662F431F1FB8047900975F4C /* FPCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPCommentViewController.swift; sourceTree = "<group>"; };
+		662F43211FB80D3400975F4C /* FPFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFeedViewController.swift; sourceTree = "<group>"; };
+		662F43231FB80D6600975F4C /* FPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHomeViewController.swift; sourceTree = "<group>"; };
 		66391D1F1FB34D6100AEB34B /* FriendlyPix-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FriendlyPix-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66391D221FB34D6100AEB34B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66391D271FB34D6100AEB34B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,7 +96,6 @@
 				662F430A1FB6D9EF00975F4C /* FPComment.swift */,
 				662F43091FB6D9EF00975F4C /* FPPost.swift */,
 				662F430B1FB6D9EF00975F4C /* FPUser.swift */,
-				662F430C1FB6D9EF00975F4C /* KZPropertyMapper+extension.swift */,
 			);
 			name = Models;
 			path = "New Group";
@@ -94,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				66391D291FB34D6100AEB34B /* Assets.xcassets */,
-				66391D2B1FB34D6100AEB34B /* LaunchScreen.storyboard */,
 				662F43131FB6DA7700975F4C /* Amaranth-Bold.otf */,
+				66391D2B1FB34D6100AEB34B /* LaunchScreen.storyboard */,
 				66391D261FB34D6100AEB34B /* Main.storyboard */,
 				66391D2E1FB34D6100AEB34B /* Info.plist */,
 				662F43141FB6DFD300975F4C /* GradientLayer.swift */,
@@ -106,7 +117,14 @@
 		662F43121FB6DA3800975F4C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				662F431B1FB7431100975F4C /* FPPhotoTimelineViewController.swift */,
+				662F431D1FB7757B00975F4C /* FPAccountViewController.swift */,
+				662F43211FB80D3400975F4C /* FPFeedViewController.swift */,
+				662F43231FB80D6600975F4C /* FPHomeViewController.swift */,
+				662F43171FB7071C00975F4C /* FPTabBarController.swift */,
+				662F43191FB7197200975F4C /* FPEditPhotoViewController.swift */,
 				6676A04C1FB61F240024429D /* SignInViewController.swift */,
+				662F431F1FB8047900975F4C /* FPCommentViewController.swift */,
 				662F43041FB6D8E800975F4C /* FPAuthPickerViewController.swift */,
 				662F43051FB6D8E800975F4C /* FPAuthPickerViewController.xib */,
 			);
@@ -331,15 +349,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662F431A1FB7197200975F4C /* FPEditPhotoViewController.swift in Sources */,
 				662F43061FB6D8E800975F4C /* FPAuthPickerViewController.swift in Sources */,
+				662F43201FB8047900975F4C /* FPCommentViewController.swift in Sources */,
+				662F43241FB80D6600975F4C /* FPHomeViewController.swift in Sources */,
 				662F430F1FB6D9F000975F4C /* FPUser.swift in Sources */,
+				662F43221FB80D3400975F4C /* FPFeedViewController.swift in Sources */,
 				662F43151FB6DFD300975F4C /* GradientLayer.swift in Sources */,
+				662F431C1FB7431100975F4C /* FPPhotoTimelineViewController.swift in Sources */,
 				662F430D1FB6D9F000975F4C /* FPPost.swift in Sources */,
 				6676A04D1FB61F240024429D /* SignInViewController.swift in Sources */,
-				662F43101FB6D9F000975F4C /* KZPropertyMapper+extension.swift in Sources */,
+				662F431E1FB7757B00975F4C /* FPAccountViewController.swift in Sources */,
 				662F430E1FB6D9F000975F4C /* FPComment.swift in Sources */,
 				6676A04F1FB61F7D0024429D /* FPAppState.swift in Sources */,
 				66391D231FB34D6100AEB34B /* AppDelegate.swift in Sources */,
+				662F43181FB7071C00975F4C /* FPTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

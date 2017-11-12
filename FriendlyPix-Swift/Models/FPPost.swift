@@ -19,7 +19,7 @@ class FPPost: NSObject, NSCoding, NSCopying, STXPostItem {
     @objc private var _user: FPUser?
     @objc private var _text: String?
     @objc private var _comments: [FPComment]?
-    @objc private var _likes: [String: Bool]?
+    @objc private var _likes: [AnyHashable: Any]?
     @objc private var _liked: Bool = false
 
     func postID() -> String? {
@@ -53,8 +53,16 @@ class FPPost: NSObject, NSCoding, NSCopying, STXPostItem {
         return ["count": totalLikes()]
     }
 
+    func setLikes(_ likes: [AnyHashable: Any]) {
+        _likes = likes
+    }
+
     func liked() -> Bool {
         return _liked
+    }
+
+    func setLiked(_ liked: Bool) {
+        _liked = liked
     }
 
     func comments() -> [Any]? {
@@ -69,9 +77,11 @@ class FPPost: NSObject, NSCoding, NSCopying, STXPostItem {
             return 0
         }
         var totalLikes = likes.count
-        if _liked && (likes[userId] ?? false) {
+        if _liked && (likes[userId] == nil) {
+            // if current user liked after syncing.
             totalLikes += 1
-        } else if (!_liked && !(likes[userId] ?? false)) {
+        } else if (!_liked && (likes[userId] != nil)) {
+            // if current user disliked after syncing.
             totalLikes -= 1
         }
         return max(0, totalLikes)
@@ -92,7 +102,9 @@ class FPPost: NSObject, NSCoding, NSCopying, STXPostItem {
         aCoder.encode(_link, forKey: "link")
         aCoder.encode(_comments, forKey: "comments")
         aCoder.encode(_likes, forKey: "likes")
-
+        aCoder.encode(_user, forKey: "user")
+        aCoder.encode(_text, forKey: "text")
+        aCoder.encode(_liked, forKey: "liked")
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -101,7 +113,7 @@ class FPPost: NSObject, NSCoding, NSCopying, STXPostItem {
         _imageURL = aDecoder.decodeObject(forKey: "imageURL") as? URL
         _link = aDecoder.decodeObject(forKey: "link") as? URL
         _comments = aDecoder.decodeObject(forKey: "comments") as? [FPComment]
-        _likes = aDecoder.decodeObject(forKey: "likes") as? [String: Bool]
+        _likes = aDecoder.decodeObject(forKey: "likes") as? [AnyHashable: Any]
         _user = aDecoder.decodeObject(forKey: "user") as? FPUser
         _text = aDecoder.decodeObject(forKey: "text") as? String
         _liked = aDecoder.decodeBool(forKey: "liked")
@@ -134,8 +146,8 @@ class FPPost: NSObject, NSCoding, NSCopying, STXPostItem {
         }
         let mappingDictionary: [AnyHashable: Any] = [
             "text": KZPropertyDescriptor(propertyName: "_text", andMapping: nil),
-            "full_url": KZPropertyDescriptor(propertyName: "_imageURL", andMapping: "URL"),
-            "timestamp": KZPropertyDescriptor(propertyName: "_postDate", andMapping: "Date"),
+            "image_url": KZPropertyDescriptor(propertyName: "_imageURL", andMapping: "URL"),
+            "timestamp": KZPropertyDescriptor(propertyName: "_postDate", selector: #selector(FPPost.boxValueAsDate(_:)))
         ]
         KZPropertyMapper.mapValues(from: NSDictionary(dictionary: dictionary), toInstance: self, usingMapping: mappingDictionary)
         if let author = dictionary["author"] as? [AnyHashable: Any] {
@@ -143,12 +155,12 @@ class FPPost: NSObject, NSCoding, NSCopying, STXPostItem {
         }
     }
 
-    convenience init(snapshot: DataSnapshot, andComments comments: [FPComment]) {
+    convenience init(snapshot: DataSnapshot, andComments comments: [FPComment]?) {
         self.init(dictionary: snapshot.value as? [AnyHashable: Any])
         _postID = snapshot.key
         _comments = comments
         if let userID = FPAppState.sharedInstance.currentUser?.userID(), let likes = _likes {
-            _liked = likes[userID] ?? false
+            _liked = likes[userID] != nil
         } else {
             _liked = false
         }
@@ -185,6 +197,13 @@ class FPPost: NSObject, NSCoding, NSCopying, STXPostItem {
             "sharedURL": sharedURL()?.description ?? "",
         ]
         return String(format: "<%@: %p> %@>", NSStringFromClass(type(of: self)), self, dictionary)
+    }
+
+    @objc func boxValueAsDate(_ value: NSNumber?) -> NSDate? {
+        guard let value = value else {
+            return nil
+        }
+        return NSDate(timeIntervalSince1970: TimeInterval(value.doubleValue / 1000.0))
     }
 
 }

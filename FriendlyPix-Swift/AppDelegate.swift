@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
 
+        UINavigationBar.appearance().tintColor = UIColor.lightText
+
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in }
         // For iOS 10 display notification (sent via APNS)
         UNUserNotificationCenter.current().delegate = self

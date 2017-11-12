@@ -9,15 +9,28 @@
 import Foundation
 import FirebaseDatabase
 import KZPropertyMapper
+import STXDynamicTableView
 
-class FPComment: NSObject, NSCoding, NSCopying {
+class FPComment: NSObject, NSCoding, NSCopying, STXCommentItem {
     @objc private var _commentID: String?
     @objc private var _text: String?
     @objc private var _postDate: Date?
     @objc private var _from: FPUser?
 
+    func from() -> STXUserItem? {
+        return _from
+    }
+
     func commentID() -> String? {
         return _commentID
+    }
+
+    func text() -> String? {
+        return _text
+    }
+
+    func postDate() -> Date? {
+        return _postDate
     }
 
     func encode(with aCoder: NSCoder) {
@@ -56,7 +69,7 @@ class FPComment: NSObject, NSCoding, NSCopying {
         }
         let mappingDictionary: [AnyHashable: Any] = [
             "text": KZPropertyDescriptor(propertyName: "_text", andMapping: nil),
-            "timestamp": KZPropertyDescriptor(propertyName: "_postDate", andMapping: "Date"),
+            "timestamp": KZPropertyDescriptor(propertyName: "_postDate", selector: #selector(FPComment.boxValueAsDate(_:))),
         ]
         KZPropertyMapper.mapValues(from: NSDictionary(dictionary: dictionary), toInstance: self, usingMapping: mappingDictionary)
         if let author = dictionary["author"] as? [AnyHashable: Any] {
@@ -100,6 +113,13 @@ class FPComment: NSObject, NSCoding, NSCopying {
             "text": _text ?? "",
         ]
         return String(format: "<%@: %p> %@>", NSStringFromClass(type(of: self)), self, dictionary)
+    }
+
+    @objc func boxValueAsDate(_ value: NSNumber?) -> NSDate? {
+        guard let value = value else {
+            return nil
+        }
+        return NSDate(timeIntervalSince1970: TimeInterval(value.doubleValue / 1000.0))
     }
 
 }
